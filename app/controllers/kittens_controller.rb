@@ -2,10 +2,20 @@ class KittensController < ApplicationController
 
   def index
     @kittens = Kitten.all.order(:created_at => "DESC")
+
+    respond_to do |format|
+      format.html #{ render :html => @kittens }
+      format.json { render :json => @kittens }
+    end
   end
 
   def show
     @kitten = Kitten.find(params[:id])
+
+    respond_to do |format|
+      format.html #{ render :html => @kitten }
+      format.json { render :json => @kitten }
+    end
   end
 
   def new
@@ -35,7 +45,7 @@ class KittensController < ApplicationController
   def update
     @kitten = Kitten.find(params[:id])
     @kitten.update(kitten_params)
-    
+
     if @kitten.save
       flash[:notice] = "Kitten successfully updated"
       redirect_to kitten_path
