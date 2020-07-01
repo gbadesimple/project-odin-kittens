@@ -8,4 +8,6 @@ The aim of this project is to have an understanding of the RESTful API and how i
 
 You can find this project full description following [Odinproject](https://www.theodinproject.com/lessons/apis) curriculum.
 
-If you like my work, fork this repo and `db:migrate` and run `rails server`
+If you like my work, fork this repo `db:migrate` and run `rails server`
+
+Goodluck!!!
