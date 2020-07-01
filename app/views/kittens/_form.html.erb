@@ -1,0 +1,23 @@
+<%= simple_form_for @kitten do |form| %>
+<div class="form field">
+  <%= form.input :name, wrapper: false, input_html: {class:"input", autofocus: true }, label_html: {class: "label"} %>
+<div>
+
+<div class="form field">
+  <%= form.input :age, wrapper: false, input_html: {class:"input"}, label_html: {class:"label"} %>
+</div>
+
+<div class="form field">
+  <%= form.input :cuteness, wrapper: false, input_html: {class:"input"}, label_html: {class:"label"} %>
+</div>
+
+<div class="form field">
+  <%= form.input :softness, wrapper: false, input_html: {class:"input"}, label_html: {class:"label"} %>
+</div>
+
+  <div class="field">
+    <div class="field-control">
+      <%= form.submit "Submit", class:"button is-info" %>
+    </div>
+  <div>
+<% end %>

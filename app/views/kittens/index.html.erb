@@ -1,12 +1,32 @@
-<h1> All Kittens </h1>
+<div class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-4">
 
-  <%= @kittens.each do |kitten| %>
-    <strong>Name:</strong>
-      <%= kitten.name %>
-    <strong>Age:</strong>
-      <%= kitten.age %>
-    <strong>Cuteness:</strong>
-      <%= kitten.cuteness %>
-    <strong>Softeness:</strong>
-      <%= kitten.softeness %>
-  <% end %>
+        <h1 class="title is-4"> All Kittens (<%=@kittens.count %>)</h1>
+
+        <% @kittens.each do |kitten| %>
+          <table border="2">
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Cuteness</th>
+              <th>Softness</th>
+            <tr>
+            <tr>
+              <td><%= kitten.name %></td>
+              <td><%= kitten.age %></td>
+              <td><%= kitten.cuteness %></td>
+              <td><%= kitten.softness %></td>
+            </tr><hr />
+          </table>
+          <%= link_to "edit", edit_kitten_path(kitten[:id]) %>
+          <%= link_to "show", kitten_path(kitten[:id]) %>
+
+        <% end %><br /><hr />
+      <%= link_to "New kitten", new_kitten_path, class: "button is-info" %>
+
+      <div>
+    </div>
+  </div>
+</div>

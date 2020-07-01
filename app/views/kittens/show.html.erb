@@ -1,0 +1,26 @@
+<div class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-4">
+
+        <h1 class="title is-4"> Your Kitten </h1>
+
+        <div>
+          <strong> Name: </strong>
+          <%= @kitten.name %><br />
+          <strong> Age: </strong>
+          <%= @kitten.age %><br />
+          <strong> Cuteness: </strong>
+          <%= @kitten.cuteness %><br />
+          <strong> Sofness: </strong>
+          <%= @kitten.softness %><br />
+
+          <%= link_to "Edit", edit_kitten_path(@kitten[:id]), class: "button is-info" %>
+          <%= link_to "Delete", kitten_path(@kitten[:id]), method: :delete, data: {confirm: "Are you sure"}, class:"button is-danger" %>
+          <%= link_to "Back", root_path, class: "button is-info" %>
+        <div>
+
+      <div>
+    </div>
+  </div>
+</div>
