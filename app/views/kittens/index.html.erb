@@ -3,7 +3,9 @@
     <div class="columns is-centered">
       <div class="column is-4">
 
-        <h1 class="title is-4"> All Kittens (<%=@kittens.count %>)</h1>
+        <h1 class="title is-4"> All Kittens (<%=@kittens.count %>)  <%= link_to "Creat New Kitten", new_kitten_path, class: "button is-info" %></h1>
+
+
 
         <% @kittens.each do |kitten| %>
           <table border="2">
@@ -24,7 +26,6 @@
           <%= link_to "show", kitten_path(kitten[:id]) %>
 
         <% end %><br /><hr />
-      <%= link_to "New kitten", new_kitten_path, class: "button is-info" %>
 
       <div>
     </div>
