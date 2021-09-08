@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 
 gem 'simple_form'
 gem 'bulma-rails', '~> 0.9.0'
-gem 'better_errors', '~> 2.7', '>= 2.7.1'
+gem 'better_errors', '~> 2.8'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
